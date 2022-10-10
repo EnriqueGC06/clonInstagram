@@ -14,6 +14,8 @@
 
 html {
     font-size: 62.5%;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -27,6 +29,10 @@ ul{
 
 a {
     text-decoration: none;
+}
+
+.main--carousel{
+    display: none;
 }
 
 .main--login {
@@ -53,7 +59,7 @@ a {
 .login--form .form--input {
     width: 100%;
     padding: 10px;
-    margin: 5px;
+    margin-bottom: .7rem;
     border-radius: 5px;
     border: 1px solid var(--gray--color);
 }
@@ -63,6 +69,7 @@ a {
     padding: 8px;
     width: 80px;
     margin: 0 auto;
+    margin-top: .7rem;
     background-color: var(--buttons-color);
     width: 100%;
     border: 0;
@@ -134,12 +141,16 @@ a {
     border-radius: 10px;
 }
 
+/* footer */
+
 .footer--list{
     display: flex;
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 768px;
+    font-size: 1.4rem;
 }
 
 .footer--list li{
@@ -148,4 +159,41 @@ a {
 
 .footer--list li a{
     color: var(--gray-color)
+}
+
+@media (min-width: 768px) {
+    body{
+        background-color: #fafafa;
+    }
+
+    .main--login{
+        padding: 15px;
+        max-width: 370px;
+    }
+}
+
+@media (min-width: 1024px){
+    .main{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        max-width: 850px;
+    }
+
+    .main--carousel{
+        position: relative;
+        display: block;
+        background-image: url("./imgs/case.png");
+        background-size: cover;
+        width: 400px;
+        height: 600px;
+    }
+
+    .main--carousel img{
+        position: absolute;
+        right: 14px;
+        bottom: 60px;
+        height: 86%;
+    }
 }
