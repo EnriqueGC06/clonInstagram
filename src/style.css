@@ -1,6 +1,7 @@
 :root{
-    --gray--color: gray;
+    --gray-color: gray;
     --blue-color: #3851a4;
+    --buttons-color: #afdcf9;
 }
  
 /* Reset values */
@@ -62,6 +63,11 @@ a {
     padding: 8px;
     width: 80px;
     margin: 0 auto;
+    background-color: var(--buttons-color);
+    width: 100%;
+    border: 0;
+    color: white;
+    font-weight: 600;
 }
 
 .divisor {
@@ -101,4 +107,45 @@ a {
 .alternative__paragraph{
     margin-top: 60px;
     text-align: center;
+}
+
+.links--paragraph{
+    margin: 50px 0 20px;
+    text-align: center;
+}
+
+.alternative--link__blue{
+    color: var(--blue-color);
+    font-weight: 700;
+}
+
+/* Buttons img */
+
+.links--list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.links--list img{
+    width: 100%;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.footer--list{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer--list li{
+    margin: 5px;
+}
+
+.footer--list li a{
+    color: var(--gray-color)
 }
